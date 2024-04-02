@@ -3,24 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjetoMari.MainPage">
 
-  <Grid>
-     <Image x:Name="coelho.png"
-           Aspect="Fill"/>
+   <Grid>
+   <Grid.RowDefinitions>
+    <RowDefinition Height="*"/>
+    <RowDefinition Height="*"/>
+    <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
 
-       <Frame Backgound="Pink"
+      <Image Source="coelho.png"
+             Aspect="Fill"
+             Grid.RowSpan="3"/>
+
+       <Frame BackgroundColor="Pink"
           CornerRadius="15"
-          VerticalOptions="Start">
+          Grid.Row="0">
 
           <Grid>
               <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="30"/>
+              <ColumnDefinition Width="*"/>
               <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+             <RowDefinition Height="*"/>
+             <RowDefinition Height="*"/>
+             <RowDefinition Height="*"/>
+             </Grid.RowDefinitions>
 
             <ProgressBar x:Name="progressBarFome"
-               VerticalOptions="Start"
-               ProgressColor="Blue"
-               Grid.Column="1"/>
+              ProgressColor="Red"
+              Grid.Row="1"
+              Grid.Column="1"/>
           </Grid>
 
         </Frame>  
